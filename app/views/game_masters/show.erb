@@ -1,0 +1,16 @@
+<h1>Welcome <%= @game_master.name%>!</h1>
+<p> <%= link_to 'DELETE PROFILE', @game_master, method: :delete, data: {confirm: "Are you sure?"}%></p>
+
+<%= image_tag @game_master.image %>
+
+<% if !@game_master.campaigns.empty? %>
+    <h2> Your Campaigns:</h2>
+    <ul>
+        <% @game_master.campaigns.each do |campaign|%>
+            <li> <%= link_to campaign.title, campaign_path(campaign) %> - <%= link_to 'EDIT', edit_game_master_campaign_path(@game_master, campaign) %></li>
+        <%end%>
+    </ul>
+<%end%>
+
+<div><%= link_to 'Create a new campaign!', new_game_master_campaign_path(@game_master) %> </div>
+

@@ -1,0 +1,13 @@
+<h1><%= @campaign.title%>!</h1>
+
+
+<% if !@campaign.episodes.empty? %>
+    <ul>
+        <% @campaign.episodes.each do |episode|%>
+        <li> <%= link_to episode.title, game_master_campaign_episode_path(@game_master, @campaign, episode) %> </li>
+        <%end%>
+
+    </ul>
+<%end%>
+
+<%= link_to 'CREATE AN EPISODE',  new_game_master_campaign_episode_path(@game_master, @campaign)%>

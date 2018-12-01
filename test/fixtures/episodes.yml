@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  guide_master: one
+  campaign: one
+  title: MyString
+  date: 2018-11-30 16:31:45
+  summary: MyText
+  notes: MyText
+  setting: one
+
+two:
+  guide_master: two
+  campaign: two
+  title: MyString
+  date: 2018-11-30 16:31:45
+  summary: MyText
+  notes: MyText
+  setting: two

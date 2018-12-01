@@ -1,0 +1,7 @@
+
+<h1>Game Master List - Index</h1>
+
+<%@game_masters.each do |game_master|%>
+    <%= image_tag game_master.image %>
+    <%= link_to game_master.name, game_master_path(game_master) %>
+<%end%>

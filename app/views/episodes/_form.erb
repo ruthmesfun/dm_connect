@@ -1,0 +1,11 @@
+<%= form_for [@game_master, @campaign, @episode] do |f| %>
+    <p><%=f.label :title%> </p>
+    <p><%= f.text_field :title%></p>
+    <p><%=f.label :date%></p>
+    <p><%= f.date_select :date%></p>
+    <p><%= f.label :summary%></p>
+    <p><%= f.text_area :summary%></p>
+    <p><%= f.label :notes%></p>
+    <p><%= f.text_area :notes%></p>
+    <p><%= f.submit%></p>
+<% end %>
