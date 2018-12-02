@@ -1,6 +1,22 @@
+
 <%= form_for [@game_master, @campaign] do |f| %>
+    <h2>CAMPAIGN</h2>
     <%=f.label :title%>
     <%= f.text_field :title%>
+    <h2>FIRST EPISODE</h2>
+    <%= f.fields_for :episodes do |ep|%>
+        <p><%=ep.label :title%> </p>
+        <p><%= ep.text_field :title%></p>
+        <p><%=ep.label :date%></p>
+        <p><%= ep.date_select :date%></p>
+        <p><%= ep.label :summary%></p>
+        <p><%= ep.text_area :summary%></p>
+        <p><%= ep.label :notes%></p>
+        <p><%= ep.text_area :notes%></p>
+    <%end%>
+
     <%= f.submit%>
 <% end %>
+
+
 

@@ -7,7 +7,6 @@ class CreateEpisodes < ActiveRecord::Migration[5.2]
       t.datetime :date
       t.text :summary
       t.text :notes
-      t.references :setting, foreign_key: true
 
       t.timestamps
     end

@@ -2,5 +2,6 @@
 <h1>Campaign List - Index</h1>
 <ul>
     <%@campaigns.each do |campaign|%>
-        <li> <%=campaign.title%></li>
+        <li> <%= link_to campaign.title,
+        game_master_campaign_path(campaign.episodes.last.game_master,campaign) %></li>
     <%end%>

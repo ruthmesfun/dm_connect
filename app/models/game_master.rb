@@ -1,4 +1,5 @@
 class GameMaster < ApplicationRecord
-    has_many :episodes
-    has_many :campaigns, through: :episodes
+    has_many :episodes, inverse_of: :game_master
+    has_many :campaigns, -> {distinct}, through: :episodes
+
 end

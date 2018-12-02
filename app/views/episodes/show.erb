@@ -1,2 +1,12 @@
-EPISODE SHOW PAGE
+
+<h1><%= @episode.title%> - <%= @episode.campaign.title%></h1>
+<h2>Game Master: <%= link_to @episode.game_master.name, game_master_path(@episode.game_master)%> </h2>
+<p>Session Date: <%= @episode.date.to_date%></p>
+
+<h3> Summary: </h3>
+<p><%= @episode.summary%></p>
+
+<h3> Notes: </h3>
+<p><%= @episode.notes%></p>
+
 

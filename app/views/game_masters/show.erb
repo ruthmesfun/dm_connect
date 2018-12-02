@@ -7,7 +7,7 @@
     <h2> Your Campaigns:</h2>
     <ul>
         <% @game_master.campaigns.each do |campaign|%>
-            <li> <%= link_to campaign.title, campaign_path(campaign) %> - <%= link_to 'EDIT', edit_game_master_campaign_path(@game_master, campaign) %></li>
+            <li> <%= link_to campaign.title, game_master_campaign_path(@game_master, campaign) %> - <%= link_to 'EDIT', edit_game_master_campaign_path(@game_master, campaign) %></li>
         <%end%>
     </ul>
 <%end%>

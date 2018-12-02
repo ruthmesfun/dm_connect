@@ -25,26 +25,15 @@ ActiveRecord::Schema.define(version: 2018_11_30_213145) do
     t.datetime "date"
     t.text "summary"
     t.text "notes"
-    t.integer "setting_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["campaign_id"], name: "index_episodes_on_campaign_id"
     t.index ["game_master_id"], name: "index_episodes_on_game_master_id"
-    t.index ["setting_id"], name: "index_episodes_on_setting_id"
   end
 
   create_table "game_masters", force: :cascade do |t|
     t.string "name"
     t.string "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "settings", force: :cascade do |t|
-    t.string "town_name"
-    t.integer "population"
-    t.text "description"
-    t.text "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

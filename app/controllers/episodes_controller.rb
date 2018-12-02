@@ -11,7 +11,7 @@ class EpisodesController < ApplicationController
     end
 
     def create
-        @episode = @campaign.episodes.create(episode_params)
+        @episode = @campaign.episodes.build(episode_params)
         @episode.game_master = @game_master
         @episode.save
         redirect_to game_master_campaign_episode_path(@game_master, @campaign, @episode)
@@ -43,6 +43,6 @@ class EpisodesController < ApplicationController
         @episode = Episode.find(params[:id])
     end
     def episode_params
-        params.require(:episode).permit(:title, :game_master_id, :campaign_id, :date, :summary, :notes, :setting_id)
+        params.require(:episode).permit(:title, :game_master_id, :campaign_id, :date, :notes, :setting_id)
     end
 end
